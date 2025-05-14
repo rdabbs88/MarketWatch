@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Stock Retriever</title></head>
+<body>
+    <h1>Enter Stock Ticker</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.ticker.label }} {{ form.ticker() }}
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

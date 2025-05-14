@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ ticker }} Results</title></head>
+<body>
+    <h1>{{ ticker }} Stock Info</h1>
+    <img src="{{ url_for('static', filename='plots/' + ticker + '.png') }}" alt="Stock Plot">
+    <br><a href="{{ url_for('routes.index') }}">Back</a>
+</body>
+</html>
