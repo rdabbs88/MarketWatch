@@ -7,7 +7,7 @@ Is a web application that allows a user to input stock ticker symbols and it wil
 
 
 ## Overview
-This web application helps users analyze stock information, by retrieving current and historical data using the Alpha Vantage API. After submitting a valid ticker symbol, the following will be displayed:
+This web application helps users analyze stock information, by retrieving current and historical data using the Alpha Vantage API. After submitting a valid ticker symbol, the following will be displayed, which are also visualized through a graph:
 - Latest Closing price
 - 50-day moving average
 - 200-day moving average
