@@ -4,6 +4,7 @@ import pandas as pd
 import time
 from datetime import datetime
 import os
+
 os.environ["MPLCONFIGDIR"] = "/tmp"
 
 # add a cache to help with rate limit issues

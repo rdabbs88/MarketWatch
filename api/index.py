@@ -1,4 +1,7 @@
+import os
 from flask_app import create_app
+
+os.environ["MPLCONFIGDIR"] = "/tmp"
 
 app = create_app()
 
