@@ -1,13 +1,33 @@
 # MarketWatch
 
-**Description:** Allows a user to input stock ticker symbols and it will output real-time stock data and metrics. This includes its latest price, a 50-day moving average, a 200-day moving average, and P/E ratio, which can all be used as indicators to evaluate whether a stock is moving in an upward or downward trend. Additionally, these indicators are visualized through a graph that is displayed. This is also useful for identifying growth or "rocket" stocks.
+Is a web application that allows a user to input stock ticker symbols and it will output real-time stock data and metrics. It can be used as a tool for evaluating whether a stock is moving in an upward or downward trend using technical indicators.
 
-**Functionality and User Interface:** Python, Flask, and HTML/CSS
+## Website Link
+[https://market-watch-beryl.vercel.app/](https://market-watch-beryl.vercel.app/)
 
-**Real-time data retrieval:** Alpha Vantage API
 
-**Data visualization/graphs:** Matplotlib
+## Overview
+This web application helps users analyze stock information, by retrieving current and historical data using the Alpha Vantage API. After submitting a valid ticker symbol, the following will be displayed:
+- Latest Closing price
+- 50-day moving average
+- 200-day moving average
+- P/E (Price-to-Earnings) ratio
 
-**Website hosting and deployment:** Vercel
+**Why:** These metrics are useful indicators to identify growth or "rocket" stocks, as well as visualizing a stock's upward or downward trend.
 
-**Market Analyzer Website:** https://market-watch-beryl.vercel.app/
+## Technology Stack
+
+- **Frontend:**
+    - HTML, CSS
+
+- **Backend:**
+    - Python, Flask
+
+- **API/Data:**
+    - Alpha Vantage (TIME_SERIES_DAILY, OVERVIEW)
+
+- **Data visualization/graphs:** 
+    - Matplotlib
+
+- **Website Deployment:** 
+    - Vercel
