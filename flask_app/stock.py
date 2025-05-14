@@ -5,6 +5,9 @@ import time
 from datetime import datetime
 import os
 
+import base64
+from io import BytesIO
+
 os.environ["MPLCONFIGDIR"] = "/tmp"
 
 # add a cache to help with rate limit issues
@@ -103,6 +106,16 @@ def generate_plot(data, ticker):
     plt.title(f"{ticker.upper()}: 30-Day Trend")
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plot_path = f"flask_app/static/plots/{ticker}.png"
-    plt.savefig(plot_path)
-    return plot_path
+
+    # Save to in-memory buffer instead of disk
+    buf = BytesIO()
+    plt.savefig(buf, format="png")
+    buf.seek(0)
+    encoded = base64.b64encode(buf.read()).decode("utf-8")
+    plt.close()
+
+    return f"data:image/png;base64,{encoded}"
+
+    # plot_path = f"flask_app/static/plots/{ticker}.png"
+    # plt.savefig(plot_path)
+    # return plot_path

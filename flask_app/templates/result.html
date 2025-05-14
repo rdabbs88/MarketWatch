@@ -11,7 +11,7 @@
     {% if error %}
         <p class="error">{{ error }}</p>
     {% else %}
-        <img src="{{ url_for('static', filename='plots/' + ticker + '.png') }}" alt="Stock Plot">
+        <img src="{{ plot_url }}" alt="Stock Plot">
         <p><strong>Latest Price:</strong> ${{ latest_price }}</p>
         <p><strong>50-Day Moving Avg:</strong> ${{ ma_50 }}</p>
         <p><strong>200-Day Moving Avg:</strong> ${{ ma_200 }}</p>
