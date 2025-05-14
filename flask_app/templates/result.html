@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><title>{{ ticker }} Results</title></head>
+<head>
+    <title>{{ ticker if ticker else "Stock" }} Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
 <body>
-    <h1>{{ ticker }} Stock Info</h1>
-    <img src="{{ url_for('static', filename='plots/' + ticker + '.png') }}" alt="Stock Plot">
+    <h1>{{ ticker if ticker else "Unknown Ticker" }} Stock Info</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% else %}
+        <img src="{{ url_for('static', filename='plots/' + ticker + '.png') }}" alt="Stock Plot">
+        <p><strong>Latest Price:</strong> ${{ latest_price }}</p>
+        <p><strong>50-Day Moving Avg:</strong> ${{ ma_50 }}</p>
+        <p><strong>200-Day Moving Avg:</strong> ${{ ma_200 }}</p>
+        <p><strong>P/E Ratio:</strong> {{ pe_ratio }}</p>
+    {% endif %}
+
     <br><a href="{{ url_for('routes.index') }}">Back</a>
 </body>
 </html>
