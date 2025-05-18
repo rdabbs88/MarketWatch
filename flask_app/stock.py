@@ -11,7 +11,7 @@ from io import BytesIO
 os.environ["MPLCONFIGDIR"] = "/tmp"
 
 # add a cache to help with rate limit issues
-# key = (ticker, date), value = repsonse dict
+# key = (ticker, date), value = response dict
 stock_cache = {}
 
 def get_stock_data(ticker, api_key):

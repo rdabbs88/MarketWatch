@@ -6,6 +6,15 @@ Is a web application that allows a user to input stock ticker symbols and it wil
 [https://market-watch-beryl.vercel.app/](https://market-watch-beryl.vercel.app/)
 
 
+## Project Development Journey
+
+- **Step 1:** Initial Project Research, Data Analysis, and Website Development
+    - Github link: [https://github.com/rdabbs88/StockMarketAnalyzer](https://github.com/rdabbs88/StockMarketAnalyzer)
+- **Step 2:** Improving Website and AWS Deployment
+    - Github link: [https://github.com/rdabbs88/MarketAnalyzerWebsite](https://github.com/rdabbs88/MarketAnalyzerWebsite)
+- **Step 3:** UI Improvements and Vercel Hosting
+    - Current project
+
 ## Overview
 This web application helps users analyze stock information, by retrieving current and historical data using the Alpha Vantage API. After submitting a valid ticker symbol, the following will be displayed, which are also visualized through a graph:
 - Latest Closing price
